@@ -5,14 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
   </head>
   <body>
-    <div id="outerRing">
+    <!-- outside circle -->
+    <div
+      id="outerRing"
+      class="background-color-#EEEEEE border-radius-50% w-100px h-100px"
+    >
+      <!-- inner timezones -->
       <div></div>
     </div>
+
+    <!-- clock -->
+    <div id="clock" onload="currentTime()"></div>
   </body>
 </html>
-
-<!-- Basic clock format
-<div id="clock" onload="currentTime()"></div>
-place where it needs to be later. -->
